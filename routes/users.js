@@ -11,6 +11,7 @@ var auth = function(req, res, next) {/*&& req.session.usuario === bd*/
     return res.sendStatus(401);
 };
 
+
 router.get("/usuarios",function(req,res){
   user.findAll().then(data=>{
     res.send(data);

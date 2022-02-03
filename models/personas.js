@@ -13,6 +13,10 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.INTEGER,
       allowNull: true,
       primaryKey: true
+    },
+    rol:{
+      type:DataTypes.STRING,
+      allowNull: false,
     }
   }, {
     sequelize,

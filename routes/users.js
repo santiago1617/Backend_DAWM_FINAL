@@ -72,8 +72,6 @@ router.post('/validate', function(req, res, next) {
  
       }
     }
-
- 
     idusuario =  id;
  
     console.log(id)
@@ -81,11 +79,11 @@ router.post('/validate', function(req, res, next) {
     console.log(contrasenia);
  
    //Validación
-    if(contraseniabd == contrasenia && rol == '1') {
+    if(contraseniabd == contrasenia && rol ==  1) {
       //res.cookie('usuario', usuario, {expire: new Date() + 9999});
       //req.session.usuario = usuario;
       res.redirect('/users');
-    }else if(contraseniabd == contrasenia && rol == '2') {
+    }else if(contraseniabd == contrasenia && rol == 2) {
       //req.session.usuario = usuario;
       
       res.redirect('/users/admin');

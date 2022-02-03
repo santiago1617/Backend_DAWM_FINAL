@@ -1,26 +1,18 @@
 const Sequelize = require('sequelize');
 module.exports = function(sequelize, DataTypes) {
-  return sequelize.define('personas', {
-    user: {
-      type: DataTypes.STRING,
-      allowNull: true
-    },
-    password: {
+  return sequelize.define('roles', {
+    tipo: {
       type: DataTypes.STRING,
       allowNull: true
     },
     id: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allowNull: true,
       primaryKey: true
-    },
-    rol:{
-      type:DataTypes.INTEGER,
-      allowNull: false,
     }
   }, {
     sequelize,
-    tableName: 'personas',
+    tableName: 'roles',
     timestamps: false
   });
 };

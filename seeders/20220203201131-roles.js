@@ -11,20 +11,15 @@ module.exports = {
      *   isBetaMember: false
      * }], {});
     */
-     for (let i = 0; i <3; i++) {
-      await queryInterface.bulkInsert('Personas', [{
-        user:'persona'+i+"@hotmail.com",
-        password:'persona'+i,
-        rol:1
+      await queryInterface.bulkInsert('Roles', [{
+        tipo:"cliente",
+        id:1
       }], {});
-   }
-   for (let i = 0; i <2; i++) {
-    await queryInterface.bulkInsert('Personas', [{
-      user:'admin'+i,
-      password:'admin'+i,
-      rol:2
-    }], {});
- }
+      await queryInterface.bulkInsert('Roles', [{
+        tipo:"admin",
+        id:2
+      }], {});
+   
   },
 
   async down (queryInterface, Sequelize) {
@@ -34,7 +29,8 @@ module.exports = {
      * Example:
      * await queryInterface.bulkDelete('People', null, {});
      */
-     await queryInterface.bulkDelete('Personas', null, {});
+
+     await queryInterface.bulkDelete('Roles', null, {});
     
   }
 };

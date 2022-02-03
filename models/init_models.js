@@ -1,8 +1,8 @@
 var DataTypes = require("sequelize").DataTypes;
-var _autores = require("./autores");
-var _noticias = require("./noticias");
-var _tipo_noticias = require("./tipo_noticias");
-var _personas=requeire('./personas');
+var _autores = require("./autor");
+var _noticias = require("./noticia");
+var _tipo_noticias = require("./tipo_noticia");
+var _personas=require('./personas');
 
 function initModels(sequelize) {
   var autores = _autores(sequelize, DataTypes);
